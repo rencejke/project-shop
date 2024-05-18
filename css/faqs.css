@@ -1,0 +1,131 @@
+@font-face
+{
+   font-family: 'Poppins';
+   src: url('../font/Poppins-Light.ttf');
+} /*for offline */
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+*::before,*::after{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background: white;
+	color: black;
+	display: flex;
+	min-height: 100vh;
+}
+.faq-container{
+	margin: 0;
+	padding: 4rem;
+	width: 48rem;
+}
+.accord .accord-item{
+	border-bottom: 1px solid gray;
+}
+.accord .accord-item button[aria-expanded='true']{
+	border-bottom: 1px solid black;
+}
+
+.accord button{
+	position: relative;
+	display: block;
+	text-align: left;
+	width: 100%;
+	padding: 1em 0;
+	color: royalblue;
+	font-size: 1.15rem;
+	font-weight: 400;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.accord button:hover,
+.accord button:focus{
+cursor: pointer;
+color: black;
+}
+
+.accord button:hover::after,
+.accord button:focus::after{
+	cursor: pointer;
+	color: black;
+	border: 1px solid aquamarine;
+}
+
+.accord button .accord-title{
+	padding: 1em 1.5em 1em 0;
+}
+
+.accordbutton .icon{
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 22px;
+	height: 22px;
+	border: 1px solid;
+	border-radius: 22px;
+}
+.accord button .icon::before{
+	display: block;
+	position: absolute;
+	content: '';
+	top: 9px;
+	left: 5px;
+	width: 10px;
+	height: 2px;
+	background: currentColor;
+}
+
+.accord button .icon::after{
+	display: block;
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 9px;
+	width: 2px;
+	height: 10px;
+	background: currentColor;
+}
+
+.accord button[aria-expanded='true']{
+	color: aquamarine;
+}
+
+.accord button[aria-expanded='true'] .icon::after{
+	width: 0;
+}
+
+.accord button[aria-expanded='true'] + .accord-cont{
+	opacity: 1;
+	max-height: 9em;
+	transition: all 200ms linear;
+	will-change: opacity, max-height;
+}
+
+.accord .accord-cont{
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: opacity 200ms linear, max-height 200ms linear;
+	will-change: opacity, max-height;
+}
+
+.accord .accord-cont p{
+	font-size: 1rem;
+	font-weight: 300;
+	margin: 2em 0;
+}
+.faq-container h2
+{
+	margin-bottom: 20px;
+	font-weight: bold;
+}

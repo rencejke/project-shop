@@ -1,0 +1,13 @@
+///USER///
+username:
+usertest
+
+password:
+usertest
+
+////////ADMIN///////
+username:
+admintest
+
+password:
+admintest2022
